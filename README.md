@@ -1,2 +1,1 @@
-# joshuasaikali.github.io
-Personal professional website
+joshuasaikali.github.io
