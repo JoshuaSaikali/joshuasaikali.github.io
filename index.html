@@ -27,6 +27,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#resume">Resume</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
@@ -112,9 +113,9 @@
                             <div class="subheading">C++ | BakkesMod SDK | Visual Studio | Git | GitHub</div>
                             <p>Built a Rocket League plugin using C++ and the BakkesMod SDK to automate freeplay loading after games, significantly improving the user's training efficiency. Employed an object-oriented approach to develop the plugin, leveraging the SDK to integrate seamlessly with the game's environment and enhance user experience. The project is open-source and available on GitHub.</p>
                             <video class="demo-image" playsinline autoplay muted loop>
-                                <source src="/assets/img/freeplay-demo-pre.mp4" type="video/mp4"></video>
+                                <source src="/assets/vid/freeplay-demo-pre.mp4" type="video/mp4"></video>
                             <video class="demo-image" playsinline autoplay muted loop>
-                                <source src="/assets/img/freeplay-demo-post.mp4" type="video/mp4"></video>
+                                <source src="/assets/vid/freeplay-demo-post.mp4" type="video/mp4"></video>
                         </div>
                     </div>
                     <br>
@@ -240,10 +241,53 @@
                     <p class="mb-0">When forced indoors, I am an aspiring chef, and I spend some of my free time exploring the latest technology advancements in the software development and cybersecurity world. I also enjoy diving into photography, capturing moments of nature and urban landscapes to sharpen my creative eye.</p>
                 </div>
             </section>
+            <hr class="m-0" />
+            <section class="resume-section" id="resume">
+                <div class="resume-section-content">
+                    <h2 class="mb-5" style="text-align: center;">Resume</h2>
+                    <p style="text-align: center;">Click to download!</p>
+                    <div style="text-align: center;">
+                        <a href="assets/pdf/JoshuaSaikali-Resume2025.pdf" download style="display: inline-block;">
+                            <div style="display: flex; justify-content: center;">
+                                <canvas id="pdf-canvas"></canvas>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
         </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.worker.min.js"></script>
+        <script>
+            // URL of the PDF file
+            const url = 'assets/pdf/JoshuaSaikali-Resume2025.pdf';
+        
+            // Asynchronously download PDF
+            pdfjsLib.getDocument(url).promise.then(pdf => {
+                // Fetch the first page
+                pdf.getPage(1).then(page => {
+                    // Set scale (zoom) and canvas dimensions
+                    const scale = 1.5;
+                    const viewport = page.getViewport({ scale });
+        
+                    // Prepare canvas using PDF page dimensions
+                    const canvas = document.getElementById('pdf-canvas');
+                    const context = canvas.getContext('2d');
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+        
+                    // Render PDF page into canvas context
+                    const renderContext = {
+                        canvasContext: context,
+                        viewport: viewport
+                    };
+                    page.render(renderContext);
+                });
+            });
+        </script>        
     </body>
 </html>
