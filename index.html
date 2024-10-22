@@ -49,6 +49,7 @@
                         Ottawa, ON, Canada
                     </div>
                     <ul class="lead mb-5">
+                        <li>incoming MACsec/ANYsec networking test @ nokia</li>
                         <li>ex routing/ip software engineer intern @ ciena</li>
                         <li>interested in software development, computer networks, and cybersecurity</li>
                         <li>third year CS student @ carleton u</li>
@@ -66,6 +67,14 @@
             <section class="resume-section" id="experience">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Experience</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Service Router Networking Test</h3>
+                            <div class="subheading mb-3">Nokia</div>
+                            <p>Incoming January 2025 as part of MACsec/ANYsec team.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">January 2025 - April 2025</span></div>
+                    </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Routing/IP Software Engineer</h3>
@@ -94,7 +103,41 @@
                             <h3 class="mb-0">Neurofeedback EEG Simulator - Lead Software Developer</h3>
                             <div class="subheading">C++ | Qt | Git | GitHub</div>
                             <p>Led the development of a Neurofeedback EEG Simulator that analyzes brain waves, identifies dominant frequency bands, and applies targeted treatments. Utilized agile methodologies, contributing to use cases and various UML diagrams. Implemented advanced design patterns like Observer for multithreading and Mediator for component decoupling. The project is open-source and available on GitHub.</p>
-                            <img class="demo-image" src="/assets/img/neurset-demo.png"/>
+                            <img class="demo-image" src="assets/img/neurset-demo.png"/>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0" id="sentinel">Threat Detection and Analysis with SIEM</h3>
+                            <div class="subheading">Azure Sentinel | SIEM | Python</div>
+                            <p>This project involved deploying a honeypot virtual machine integrated with Azure Sentinel to enhance the detection of malicious traffic and improve threat analysis capabilities. Automation of metadata extraction from Windows Event Viewer was achieved using Python and APIs, enabling accurate mapping of attack geolocation within Sentinel. Additionally, Azure Log Analytics and Sentinel workbooks were configured to visualize and monitor RDP brute-force attacks on a global scale, providing valuable insights into threat patterns.</p>
+                            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="assets/img/heatmap.png" class="car-image" alt="heatmap">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="assets/img/analytics.png" class="car-image" alt="analytics">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="assets/img/logs.png" class="car-image" alt="logs">
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden"><</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden"><</span>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <br>
@@ -111,11 +154,33 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Instant Freeplay Plugin | Rocket League (Epic Games)</h3>
                             <div class="subheading">C++ | BakkesMod SDK | Visual Studio | Git | GitHub</div>
-                            <p>Built a Rocket League plugin using C++ and the BakkesMod SDK to automate freeplay loading after games, significantly improving the user's training efficiency. Employed an object-oriented approach to develop the plugin, leveraging the SDK to integrate seamlessly with the game's environment and enhance user experience. The project is open-source and available on GitHub.</p>
-                            <video class="demo-image" playsinline autoplay muted loop>
-                                <source src="/assets/vid/freeplay-demo-pre.mp4" type="video/mp4"></video>
-                            <video class="demo-image" playsinline autoplay muted loop>
-                                <source src="/assets/vid/freeplay-demo-post.mp4" type="video/mp4"></video>
+                            <p>Built a Rocket League plugin using C++ and the BakkesMod SDK to automate freeplay loading after games, significantly improving the user's training efficiency. Employed an object-oriented approach to develop the plugin, leveraging the SDK to integrate seamlessly with the game's environment and enhance user experience. The project is open-source and available on GitHub. Please view next slide to see implementation.</p>
+                            <div id="freeplayCarousel" class="carousel slide">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#freeplayCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#freeplayCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <video class="car-image" playsinline autoplay muted loop>
+                                            <source src="assets/vid/freeplay-demo-pre.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <video class="car-image" playsinline autoplay muted loop>
+                                            <source src="assets/vid/freeplay-demo-post.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#freeplayCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#freeplayCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <br>
